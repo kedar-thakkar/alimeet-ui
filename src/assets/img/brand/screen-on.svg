@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="34px" height="24px" viewBox="0 0 34 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>screen_share-24px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="email" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="page-1" transform="translate(-692.000000, -877.000000)">
+            <g id="Group-2" transform="translate(-60.000000, 852.000000)">
+                <g id="Group-3" transform="translate(724.000000, 25.000000)">
+                    <g id="Shate-Screen">
+                        <g id="screen_share-24px" transform="translate(28.000000, 0.000000)">
+                            <polygon id="Path" points="0 0 34 0 34 24 0 24"></polygon>
+                            <path d="M30.1509476,18.5 L33,18.5 L33,23 L1,23 L1,18.5 L3.83671736,18.5 C3.62076069,18.0452059 3.5,17.5365682 3.5,17 L3.5,4.5 C3.5,2.56021525 5.06021525,1 7,1 L27,1 C28.9308382,1 30.5,2.56375086 30.4999995,4.501 L30.4875,17 C30.4875,17.5362779 30.3667411,18.0449963 30.1509476,18.5 Z M18.7,12.7924766 L20.0347574,11.5444785 L18.7,10.2998172 L18.7,10.8942717 L17.837499,11.0140019 C16.4857954,11.201642 15.4396446,11.6908738 14.6548852,12.4529845 C15.5502815,12.157982 16.5582322,12.016 17.7,12.016 L18.7,12.016 L18.7,12.7924766 Z" id="Shape" stroke="#00C7CC" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" fill-rule="nonzero"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

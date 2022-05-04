@@ -1,0 +1,25 @@
+POST http://devmeet.alibiz.net:8181/alimeet/meeting/saveMeeting
+Content-Type: application/json
+
+{	
+	"meetingEntity": {
+		"roomName":"test 112233",
+		"meetingTitle":"Test Title11",
+		"meetingDesc":"Test Desc11",
+		"invites":["kedarfullstack1@gmail.com", "kedarfullstack2@gmail.com", "kedarfullstack3@gmail.com"],
+		"startTime":"2021-01-23T13:00:00.000", 2021-1-23T13:30.000:0.000
+		"endTime":"2019-01-21T06:47:08.644",
+		
+		"user":{
+			"id":"1"
+		}
+	}
+}
+
+###
+
+http://devmeet.alibiz.net:8181/alimeet/authenticate
+
+###
+
+GET http://devmeet.alibiz.net:8181/alimeet/meeting/getMeetingListByDate?meetingDate=2021-02-23&userId=1

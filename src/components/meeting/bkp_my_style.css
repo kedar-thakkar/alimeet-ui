@@ -1,0 +1,68 @@
+#jitsi-wrapper{
+    position: relative;
+    width: 800px; 
+    min-height: 500px; 
+    background-color: lightcyan; 
+    /* overflow: hidden; */
+}
+
+
+#localVideo1{ 
+    position: relative;
+    width: 800px; 
+    height: 400px; 
+    top: 0;
+    left: 0; 
+
+}
+
+.img-video-off{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    width: 600px;
+    height: 400px;
+    object-fit: cover;
+    transition: .3s;
+}
+
+.img-video-off.show{
+    opacity: 1;
+    z-index: 100; 
+}
+
+
+.remote-user-wrapper{ 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    display: flex;
+    Justify-content: center; 
+    z-index: 10;
+}
+    
+.remote-user{
+    width: 120px;
+    height: 120px;
+    Background: coral;
+    margin: 0 10px; 
+    }
+
+.control-box{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;    
+    background-color: #454545; 
+    z-index: 10;
+    padding: 10px 5px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.control-box span{
+    color: white;
+}

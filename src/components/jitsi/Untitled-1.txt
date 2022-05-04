@@ -1,0 +1,121 @@
+/*
+  Main Controller
+  cstechholdings@gmail.com
+  MyPass01**
+ */
+// ////////////////////////////////////////////////////// //
+// GLOBALS
+// ////////////////////////////////////////////////////// //
+var members = [];
+var fullname, role, room, status, uid, mid;
+// ////////////////////////////////////////////////////// //
+// MEMBER GRID HANDLER
+// ////////////////////////////////////////////////////// //
+initApp = function() {
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      // Set User
+      uid = user.uid;
+      // Set Display
+      $("#firebaseui-auth").hide(1000);
+      $("#body-container").show(1000);
+      $("#header-container").show(1000);
+      // Monitor members collection and re-render grid on change.
+      firebase.database().ref('/jltv/members/').orderByChild("order").on('value', (snapshot) => {
+        if(snapshot) {
+          var content = '<div class="row">';
+          snapshot.forEach(function (items) {
+            if(items.val().disabled != 'true' ) {
+              // Add to main array
+              members[items.key] = items.val();
+              // Check if its me
+              if(items.val().uid == uid) {
+                fullname = items.val().fullname;
+                role = items.val().role;
+                room = items.val().room;
+                status = items.val().status;
+                uid = items.val().uid;
+                mid = items.key;
+              }
+              // Build HTML Component
+              content += "<div class='col col-xs-4 col-sm-4 col-md-4 col-lg-4'>";
+              content += `<div class='aspect-ratio-box ${items.val().status}'>`;
+              content += "<div class='aspect-ratio-box-inside'> <div class='flexbox-centering'> <div class='viewport-sizing'>";
+              // Only add link if this is not me and status is not closed
+              if(items.val().uid != uid && items.val().status != "Closed" && items.val().status != "Connected") { 
+                content += `<a href="#" onclick="notifyMember('${items.val().uid}', '${uid}', 'inv', '', '${fullname}', '')">${items.val().fullname}</a>`;
+              } else if(items.val().uid != uid && items.val().status == "Connected") { 
+                content += `<a href="#" onclick="setRoom('${items.val().room}');">${items.val().fullname}</a>`;
+                //content += `<a href="#" onclick="notifyMember('${items.val().uid}', '${uid}', 'dpn', 'Connected', '${fullname}', '${items.val().room}')">${items.val().fullname}</a>`;
+              } else {
+                content += items.val().fullname;
+              }
+              // Continue Building Component
+              content += `<br><span style='font-size: 16px; font-align: center;'>${items.val().status}</span>`;
+              content += `<br><div id='response-${items.val().uid}' class='portal-response'></div>`;
+              content += "</div></div></div></div></div>";
+            }
+          });
+          content += '</div>'; 
+          // RENDER
+          document.getElementById("members").innerHTML = content;
+        }
+      });
+    } else {
+      // Display Unauthorized
+      $("#body-container").hide(1000);
+      $("#firebaseui-auth").show(1000);
+      $("#header-container").hide(1000);
+    }
+  });
+};
+// ////////////////////////////////////////////////////// //
+// INIT
+// ////////////////////////////////////////////////////// //
+window.addEventListener('load', function() {
+  initApp();
+});
+// ////////////////////////////////////////////////////// //
+// Cross Context Messaging
+// ////////////////////////////////////////////////////// //
+var bc = new BroadcastChannel('room');
+bc.onmessage = function (ev) {
+  var data;
+  if(ev.data == "Connected") {
+    data = { status: ev.data };
+  } else {
+    data = { status: ev.data, room: '' };
+    localStorage.setItem('room', '');
+  }
+  var childNode = 'jltv/members/' + mid;
+  var res = firebase.database().ref().child(childNode).update(data);
+}
+// ////////////////////////////////////////////////////// //
+// FUNCTIONS
+// ////////////////////////////////////////////////////// //
+// 
+function setStatus(status) {
+  var childNode = 'jltv/members/' + mid;
+  var data = {
+    status: status
+  };
+  var res = firebase.database().ref().child(childNode).update(data);
+}
+//
+function setRoom(room) {
+  var childNode = 'jltv/members/' + mid;
+  var data = {
+    room: room,
+    status: 'Connected'
+  };
+  var res = firebase.database().ref().child(childNode).update(data);
+  window.open("https://remoteoffice.live/room/room.html?room=" + room, "Connected");
+}
+//
+function deleteNode(childNode, key) {
+  var updates = {};
+  updates['/' + childNode + '/' + key] = null;
+  var res = firebase.database().ref().update(updates);
+  return res;
+}
+

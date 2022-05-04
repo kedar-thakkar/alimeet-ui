@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>record</title>
+    <desc>Created with Sketch.</desc>
+    <g id="email" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="page-1" transform="translate(-845.000000, -880.000000)" fill-rule="nonzero">
+            <g id="Group-2" transform="translate(-60.000000, 852.000000)">
+                <g id="Group-3" transform="translate(724.000000, 25.000000)">
+                    <g id="Record-Meeting" transform="translate(128.000000, 4.000000)">
+                        <g id="record" transform="translate(54.000000, 0.000000)">
+                            <circle id="Oval" stroke="#00C7CC" stroke-width="2" cx="9.99755187" cy="9.99755187" r="9.99755187"></circle>
+                            <circle id="Oval" fill="#00C7CC" cx="9.99755187" cy="10.7473859" r="4.69883817"></circle>
+                            <circle id="Oval" fill="#00C7CC" cx="9.99755187" cy="9.99755187" r="4.69883817"></circle>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

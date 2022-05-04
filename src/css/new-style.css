@@ -1,0 +1,1783 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* { box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -o-box-sizing: border-box; -ms-box-sizing: border-box }
+body { font-family: 'Poppins', sans-serif; margin: 0; overflow-x: hidden; }
+p, h1, h2, h3, h4, h5, h6, ul, li, a { margin: 0; padding: 0; line-height: 1 }
+a { text-decoration: none; outline: none; color: #f58020 }
+a:hover { color: #333; text-decoration: none }
+img { vertical-align: top; max-width: 100%; height: auto; border: none }
+ul {
+    margin: 0;
+    padding: 0;
+}
+/***** classroom_list ****/
+.classroom_list { background: #F8F9FA; height: 100vh; }
+.wrapper { max-width: 1200px; padding: 0 30px; width: 100%; margin: 0 auto; }
+li { list-style: none; }
+.cl_list_head { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+.cl_list_middle_box ul { display: flex; flex-wrap: wrap; }
+.cl_list_middle_box ul li a svg path { fill: #fff !important; }
+.cl_list_middle_box ul li a { font-size: 15px; color: #fff; border-right: 1px solid #448DCE; min-height: 90px; text-align: center; line-height: 1; display: block; padding: 15px 5px; opacity: 0.8; transition: all ease 0.3s 0s; }
+.cl_list_middle_box ul li a.active, .cl_list_middle_box ul li a:hover { background-color: #3185CE; opacity: 1; }
+.cl_list_header { background: #3E97E5; }
+.cl_list_middle_box ul li:last-child a { border: 0; }
+.cl_list_middle_box ul a span { display: inline-block; width: 100%; height: 45px; }
+.cl_list_pofile { display: flex; align-items: center; justify-content: flex-end; }
+.cl_list_pofile_img img { width: 50px; height: 50px; object-fit: cover; border-radius: 100%; }
+.cl_list_pofile_img { position: relative; }
+.cl_list_pointer { position: absolute; width: 10px; height: 10px; background: #FFA101; border-radius: 100%; bottom: 0; right: 6px; }
+.cl_list_pofile > span { margin: 0 10px; color: #fff; font-size: 16px; }
+.cl_list_pofile span small { display: block; }
+input[type="date"i]::-webkit-calendar-picker-indicator { background: url(../images/calendar_list.svg)no-repeat center; margin: 0 20px 0 0; height: 35px; width: 32px; }
+input[type="date"i] { flex-direction: row-reverse; border: 0; outline: none; }
+.cl_meeting_list_otr { display: flex; align-items: center; justify-content: space-between; }
+.cl_search_box input[type="text"] { height: 48px; border-radius: 50px; outline: none; border: none; background: #F7F7F7; min-width: 330px; padding: 0 20px; font-size: 16px; }
+.cl_search_box button { position: absolute; right: 5px; bottom: 5px; top: 5px; border: 0; background: url(../images/search.svg)no-repeat center; background-color: #3E97E5; width: 66px; border-radius: 50px; cursor: pointer; }
+.cl_search_box { position: relative; }
+.cl_meeting_list { padding: 15px 0; background: #fff; box-shadow: 0 2px 6px rgb(0 0 0 / 5%); }
+.cl_meeting_content { /*padding: 5% 0;*/margin: 10px;}
+.cl_meeting_title { margin-bottom: 10px; position: relative; text-align: center; }
+.cl_meeting_title h2 { font-size: 40px; font-weight: 600; color: #42526e; line-height: 1.3; }
+.cl_meeting_title .cl_button { position: absolute; right: 0; top: 50%; transform: translateY(-50%); }
+.cl_button { display: inline-block; font-size: 18px; background: #03B3E5; color: #fff; padding: 15px 60px; border-radius: 5px; line-height: 1; text-transform: capitalize; border: 2px solid #03B3E5; transition: all ease 0.3s 0s; }
+.cl_button:hover { background: transparent; color: #03B3E5; }
+.cl_meeting_edit_top_row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+.cl_meeting_edit_icon a { width: 34px; border: 1px solid #EEEFF0; height: 34px; background: #fff; display: flex; align-items: center; justify-content: center; border-radius: 10px; transition: all ease 0.3s 0s; margin-left: 10px; }
+.cl_meeting_edit_icon { display: flex; justify-content: end; }
+.cl_meeting_edit_icon a:hover svg path { fill: #5B77A8; }
+.cl_meeting_edit_box { padding: 30px; border: 1px solid #E6EDF2; background: #fff; margin: 0 0 20px; }
+.cl_meeting_edit_box h4 { font-weight: 500; text-transform: capitalize; font-size: 21px; line-height: 1.3; padding-right: 20px; }
+.cl_meeting_edit_sec_row { display: flex; align-items: center; justify-content: space-between; }
+.cl_meeting_edit_sec_row h5 { font-weight: 400; font-size: 18px; color: #42526e; line-height: 1.3; }
+.cl_meeting_buton { display: inline-block; font-size: 18px; background: #F5F9FB; color: #42526e; padding: 11px 30px; line-height: 1; text-transform: capitalize; transition: all ease 0.3s 0s; border-radius: 50px; margin-right: 15px; font-weight: 400; }
+.cl_meeting_buton:hover { background: #287BD7; color: #fff; }
+/***** classroom_list ****/
+
+
+/******************** Login *******************/
+.client_login_main { height: 100vh; overflow: auto; padding: 3%; background: #F8F9FA; display: flex; }
+.client_login { 
+    background: #F9FDFF; 
+    display: flex; 
+    align-items: stretch; 
+    box-shadow: 0 0 7px rgb(0 0 0 / 9%); 
+    max-width: 1200px; 
+    margin: auto; 
+    width: 100%; 
+    border-radius: 5px; 
+}
+.client_login_close { cursor: pointer; }
+.client_login_left, .client_login_right { width: 50%; }
+.client_login_left { display: flex; align-items: center; justify-content: center; padding: 3%; }
+.client_login_right { filter: drop-shadow(0px 3px 20px rgba(0, 0, 0, 0.031)); background: #fff; }
+.client_login_header { display: flex; align-items: center; justify-content: space-between; padding: 30px 30px; border-bottom: 1px solid #dfe8ed; }
+.client_login_content { height: calc(100% - 86px); padding: 5%; display: flex; }
+.client_content_login_box { text-align: center; margin: auto; min-height: 500px; max-width: 500px; width: 100%; }
+.client_content_login_box h2 { padding-bottom: 30px; border-bottom: 1px solid #E0E4EA; margin-bottom: 10px; text-transform: capitalize; }
+.client_login_content_form_box { display: block; width: 100%; text-align: left; padding: 20px 0; }
+.client_login_content_form_box label { display: block; padding-bottom: 6px; font-size: 18px; font-weight: 400; color: #6C7B8A; }
+.client_login_content_form_box input { display: block; }
+.client_login_content_form_box input, .client_login_content_form_box select { display: block; width: 100%; height: 50px; border: 1px solid #E0E4EA; border-radius: 5px; outline: none; padding: 10px 20px; font-size: 16px; color: #343c43; }
+input#ClientButton { font-style: normal; font-weight: bold; font-size: 21px; line-height: 21px; color: #FFFFFF; padding: 15px 0; height: auto; background: #287BD7; border-radius: 5px; margin-bottom: 0; border: 2px solid #287BD7; transition: all ease 0.4s 0s; }
+input#ClientButton:hover, input#ClientButton:focus { background: transparent; color: #287BD7; }
+#ClientButton {
+    width: 100%;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 21px;
+    color: #FFFFFF;
+    padding: 15px 0;
+    height: auto;
+    background: #287BD7;
+    border-radius: 5px;
+    margin-bottom: 0;
+    border: 2px solid #287BD7;
+    transition: all ease 0.4s 0s;
+}
+#ClientButton:hover, #ClientButton:focus {
+    background: transparent;
+    color: #287BD7;
+}
+.error {
+    color: red !important;
+}
+.client_login1{
+    color: #319ED9;
+    margin-top: 1%;
+}
+.client_login_content_form_box  a { color: #287BD7; }
+.client_login_content_form_box small, .client_login_content_form_box span { font-size: 18px; font-weight: 400; color: #6C7B8A; margin-top: 20px; display: inline-block; }
+
+/******************** Login End*******************/
+
+/******************** Sign Up Start*******************/
+.client_select_main .client_login_content_form_box { padding: 10px 0; }
+select { background: url(../images/select_arrow.svg)no-repeat center right 20px; appearance: none; }
+/******************** Sign Up End*******************/
+
+/******************** Forget Password Start*******************/
+.client_forget_box { display: flex;}
+.forget_text_box {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.client_forget_password .client_content_login_box {
+    max-width: 380px;
+    min-height: unset;
+}
+/******************** Forget Password End*******************/
+
+
+/******************** Send Mail Start*******************/
+.cliend_send_mail_main .client_content_login_box {
+align-items: center;
+display: flex;
+justify-content: center;
+}
+.send_email_details {
+padding-bottom: 30px;
+}
+.send_email_details h2 {
+border: 0;
+}
+.send_email_details p {
+font-size: 20px;
+line-height: 1.3;
+padding-bottom: 15px;
+font-weight: 400;
+color: #6C7B8A;
+text-align: center;
+}
+.send_email_details p a, .send_email_details p strong {
+color: #6C7B8A;
+font-weight: 500;
+}
+/******************** Send Mail  End*******************/
+
+/****************** error_page ***************/
+.error_page  .cl_logo{
+padding:15px 0 ;
+}
+
+.error_page_content {
+padding: 100px 0;
+}
+.error_page_content h1 {
+font-size: 50px;
+text-align: center;
+list-style: 1.5;
+}
+
+.error_icon {
+position: fixed;
+bottom: 30px;
+right: 30px;
+}
+.error_page_content_box {
+display: flex;
+justify-content: center;
+align-items: center;
+height:calc(100vh - 255px);
+}
+/****************** error_page ***************/
+
+
+/****************** Edit Classroom  Start ***************/
+.cl_edit_content {
+    padding: 70px 0;
+}
+.cl_edit_content_box {
+    max-width: 1000px;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 0 10px rgb(0 0 0 / 9%);
+    border-radius: 5px;
+}
+
+.cl_edit_title {
+    border-bottom: 1px solid #ECF1F5;
+    text-align: center;
+}
+.cl_lecture_details, .cl_edit_title {
+    padding: 30px;
+}
+.cl_edit_content_box .client_login_content_form_box {
+    padding: 0 0 25px 0;
+}
+.edit_email_box {
+    border: 1px solid #ECF1F5;
+}
+.edit_main_box_email label {
+    display: block;
+    padding-bottom: 6px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #6C7B8A;
+}
+.edit_email_details_box {
+    padding: 30px;
+}
+.add_email_box {
+    position: relative;
+}
+.add_email_box input {
+    display: block;
+    width: 100%;
+    height: 50px;
+    border: 0;
+    border-radius: 0;
+    outline: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #343c43;
+    border-top: 1px solid #ecf1f5;
+    background: rgb(62 151 229 / 13%);
+    padding-right: 50px;
+}
+.add_email_box a {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.edit_email_details_box ul li a {
+    padding: 8px 18px;
+    margin: 0;
+    display: block;
+    border: 0;
+    background: rgb(61 61 61 / 95%);
+    color: #fff;
+    border-radius: 27px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.edit_email_details_box ul li {
+    display: inline-block;
+    padding: 5px;
+}
+.edit_email_details_box ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+.edit_main_box_email {
+    padding-bottom: 25px;
+}
+
+.client_login_content_form_box textarea {
+    display: block;
+    width: 100%;
+    height: 50px;
+    border: 1px solid #E0E4EA;
+    border-radius: 5px;
+    outline: none;
+    padding: 15px;
+    font-size: 16px;
+    color: #343c43;
+    min-height: 100px;
+}
+.submit_btn_box {
+    text-align: center;
+    padding: 15px 0;
+}
+.cl_cancel_btn, .cl_save_btn {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 21px;
+    color: #FFFFFF;
+    padding: 10px 30px;
+    height: auto;
+    background: #287BD7;
+    border-radius: 5px;
+    margin-bottom: 0;
+    border: 1px solid #287BD7;
+    transition: all ease 0.4s 0s;
+    margin: 0 10px;
+    min-width: 180px;
+    display: inline-block;
+}
+
+.cl_cancel_btn, .cl_save_btn:hover {
+    border-color:#EDF2F6 ;
+    color: #42526E;
+    background: transparent;
+}
+
+.cl_cancel_btn:hover {
+    border-color:#287BD7 ;
+    color: #fff;
+    background: #287BD7;
+}
+/****************** Edit Classroom End  ***************/
+
+/****************** Pofile Upload End  ***************/
+.pofile_inr_page_box {
+    max-width: 300px;
+    margin: 40px auto ;
+}
+
+.pofile_inr_page_box span {
+    display: block;
+}
+.pofile_inr_page_box .cl_list_pofile_img {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+input.upload_file_box {
+    position: absolute;
+    opacity: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    border-radius: 100%;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    min-width: unset;
+    z-index: 999;
+}
+
+.pofile_inr_page_box .cl_list_pofile_img img {
+    width: 100px;
+    height: 100px;
+}
+.pofile_inr_page_box span {
+    width: auto;
+    height: auto;
+    background: transparent;
+    bottom: -6px;
+    right: 0;
+}
+
+.pofile_upload_details input#ClientButton {
+    display: block;
+    width: auto;
+    min-width: 220px;
+    margin: 0 auto;
+}
+
+.pofile_main_box {
+    padding: 50px;
+    border: 1px solid #E6EDF2;
+    background: #fff;
+    margin: 0;
+    border-radius: 10px;
+}
+.pofile_upload_details {
+    display: flex;
+    flex-wrap: wrap;
+}
+.client_login_content_form_box_col_6 {
+    width: 50%;
+    padding: 20px;
+}
+
+/* Dropdown css */
+.drop_pofile_box .pofile_inr_page_box span {
+    text-align: center;
+    color: #000;
+}
+.drop_pofile_box .pofile_inr_page_box .cl_list_pofile_img img {
+    width: 50px;
+    height: 50px;
+}
+.cl_list_pofile a {
+    position: relative;
+}
+.drop_pofile_box {
+    position: absolute;
+    left: 50%;
+    top: 40px;
+    width: 200px;
+    padding: 10px;
+    background: #fff;
+    box-shadow: 0 0 10px rgb(0 0 0 / 5%);
+    z-index: 999;
+    border-radius: 10px;
+    transform: translateX(-50%) scaleY(0);
+    transform-origin: top;
+    transition:all linear 0.4s 0s;
+    opacity: 0;
+}
+
+.open_drop_down_menu .drop_pofile_box {
+    opacity: 1;
+    transform: translateX(-50%) scaleY(1);
+}
+
+.drop_pofile_box .pofile_inr_page_box {
+    max-width: 300px;
+    margin: 0 auto 0;
+    text-align: center;
+}
+.drop_pofile_box .pofile_inr_page_box .cl_list_pofile_img {
+    margin-bottom:20px ;
+}
+.drop_pofile_box .cl_list_pointer svg {
+    width: 20px;
+    height: 20px;
+}
+.drop_pofile_box .pofile_inr_page_box span.cl_list_pointer {
+    right: 0;
+    bottom: -2px;
+}
+.btn_drop_inr {
+    border: 1px solid #a1b0ba;
+    background: #fff;
+    padding: 5px 30px;
+    margin: 10px 0 0;
+    font-size: 16px;
+    border-radius: 30px;
+    color: #42526e;
+    transition: all ease 0.3s 0s;
+    cursor: pointer;
+}
+.drop_btn_box {
+    margin: 10px 0 0;
+}
+.btn_drop_inr:hover {
+    background: #3E97E5;
+    border-color: #3E97E5;
+    color: #fff;
+}
+/* Dropdown css */
+/****************** Pofile Upload End  ***************/
+
+
+/****************** Preview Device Setting End  ***************/
+.cl_preview_device {
+    padding:60px 0 ;
+}
+.cl_preview_box {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    width: 100%;
+    box-shadow: 0 0 10px rgb(0 0 0 / 9%);
+    border-radius: 5px;
+}
+.cl_preview_box_inr {
+    padding: 30px;
+    text-align: center;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.cl_preview_box_inr h4 {
+    text-align: left;
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+.cl_preview_box img, .cl_preview_box video {
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+}
+.cl_preview_setting {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 -20px;
+}
+.cl_preview_setting_left {
+    padding: 0 20px;
+    flex: 1;
+}
+.cl_preview_setting_left select {
+    display: block;
+    width: 100%;
+    height: 50px;
+    border: 1px solid #E0E4EA;
+    border-radius: 5px;
+    outline: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #343c43;
+    padding-right: 50px;
+}
+.cl_preview_box .submit_btn_box {
+    border: 1px solid #E0E4EA;
+    padding: 30px 0;
+}
+.cl_preview_setting_title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+    font-weight: 600;
+    font-size: 16px;
+}
+.cl_preview_setting_title svg, .cl_preview_setting_title img { margin: 0 10px; max-width: 25px; max-height: 25px;}
+
+/****************** Preview Device Setting End  ***************/
+
+
+/****************** Meeting Videos Start **************/
+
+/* Meeting Menu Css Top And Bottom */
+.top_meeting_videos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #000;
+    padding: 23px 20px;
+}
+.meeting_title {
+    color: #fff;
+}
+.meeting_menu ul {
+    display: flex;
+    align-items: center;
+    margin: 0 -15px;
+}
+.meeting_menu ul li {
+    margin: 0 15px;
+}
+.meeting_menu ul li a {
+    display: inline-block;
+    position: relative;
+}
+/* .meeting_menu ul li a:hover svg path {
+    fill: red;
+} */
+
+
+
+
+.icon_name {
+    position: absolute;
+    top: 100%;
+    color: #fff;
+    background: #287BD7;
+    padding: 10px 10px;
+    left: 50%;
+    transform: translateX(-50%)scaleY(0);
+    white-space: nowrap;
+    margin: 10px 0 0;
+    opacity: 0;
+    transform-origin: top;
+    transition: all ease 0.7s 0s;
+    font-weight: 600;
+}
+
+.icon_name:after {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent #287BD7 transparent;
+    content: "";
+    bottom: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all ease 0.7s 0s;
+}
+
+
+
+
+.bottom_meeing_menu .icon_name {
+    top: unset;
+    bottom: calc(100% + 10px);
+    margin: 0 0 0;
+}
+
+.bottom_meeing_menu .icon_name:after {
+    bottom: unset;
+    top: 100%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 10px 0 10px;
+    border-color: #287BD7 transparent transparent transparent;
+}
+
+.meeting_menu ul li a:hover .icon_name {
+    opacity: 1;
+    transform: translateX(-50%)scaleY(1);
+    z-index: 1;
+}
+
+.bottom_meeing_menu > .meeting_menu {
+    width: 33.33%;
+    display: flex;
+}
+
+.meeting_menu_bottom_left {
+    justify-content: flex-start;
+}
+
+.meeting_menu_center {
+    justify-content: center;
+}
+.meeting_menu_bottom_right {
+    justify-content: flex-end;
+}
+/* Meeting Menu Css Top And Bottom */
+
+
+/* Meeting Videos Body  */
+.meeing_video_body {
+    height: calc(100vh - 162.89px);
+    overflow: auto;
+    display: flex;    
+    background: #3C4043;
+}
+/* User LIst */
+    .cl_user_list_box_control {
+        display: flex;
+        bottom: 0;
+        align-items: center;
+        background: rgb(0 0 0 / 69%);
+        padding: 5px 10px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        align-items: baseline;
+    }
+
+    .cl_user_list {
+        transition: all ease 0.4s 0s;
+        height: 100%;
+        position: sticky;
+        top: 0;
+        overflow: auto;
+        width: 250px;
+        /* z-index: 1000; */
+    }
+    .cl_main_meeting_box {
+        flex: 1;
+        overflow: auto;
+    }
+    .cl_user_list_box_videos {
+        min-height: 167px; 
+        position: relative;
+    }
+    .cl_user_list_box_videos img, .cl_user_list_box_videos video {
+        max-width: 100%;
+        height: auto;
+        /* object-fit: cover; */
+    }
+    .cl_user_list_box {
+        position: relative;
+        width: 100%;
+        cursor: pointer;
+    }
+    .cl_user_list_box_control h4 {
+        padding: 0 15px;
+        text-transform: capitalize;
+        color: #fff;
+        font-weight: 500;
+        font-size: 15px;
+    }
+    .cl_user_list_box.fullscreen {
+        height: 80.2%;
+        position: fixed;
+        width: calc(100% - 250px);
+        right: 0;
+        top: 72px;
+        transition: all ease 0.5s 0s;
+    }
+
+    .cl_user_list_box.fullscreen .cl_user_list_box_videos {
+        height: 100%;
+    }
+
+    .cl_user_list_box.fullscreen .cl_user_list_box_videos video {
+        height: 100%;        
+    }
+
+/* User LIst */
+.cl_main_noti_box {
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    background:rgb(0 0 0 / 79%);
+    /*padding:15px;*/
+    position: fixed;
+    left: 0;
+    right: 0;
+    /* z-index: 9999; */
+    bottom: 132.33px;
+    max-height: 145px;
+    overflow: hidden;
+}
+.cl_main_noti_box h4 {
+    color: #fff;
+    font-weight: 500;
+}
+.cl_main_noti_box h6 {
+    color: #fff;
+    font-weight: 500;
+}
+.cl_main_meeting_box {
+    flex: 1;
+    overflow: auto;
+    height: 100%;
+}
+.cl_main_home_box, .cl_main_home_box_video {
+    height: 100%;
+    position: relative;
+    
+}
+.cl_main_home_box_video:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    background: #fff;
+    z-index: 99;
+    left: -3px;
+}
+
+/*************/
+.TileView .cl_user_list {
+    /*width: 100%;*/
+    width: 79.3%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: auto;
+    grid-gap: 5px;
+    justify-items: center;
+}
+
+.TileView .cl_user_list_box, .TileView .cl_user_list_box_videos {
+    height: 100%;
+}
+.TileView .cl_user_list_box_videos img, .TileView .cl_user_list_box_videos video {
+    width: 100%;
+    height: 100%;
+    /*object-fit: fill;*/
+}
+
+
+
+/* Width Count User */
+.user2 .cl_user_list_box { /*width: 50%;*/ height: 100%;}
+.user3 .cl_user_list_box, .user4 .cl_user_list_box { /*width: 50%;*/ height: auto;}
+.user5 .cl_user_list_box, .user6 .cl_user_list_box { /*width: 33.33% ;*/ height: auto;}
+.user8 .cl_user_list_box, .user7 .cl_user_list_box   { /*width: 25%;*/ height: auto;}
+.user10 .cl_user_list_box, .user11 .cl_user_list_box, .user9 .cl_user_list_box { /*width: 20%;*/ height: auto;}
+.user12 .cl_user_list_box { /*width: 25%;*/ height: auto;}
+.scroll_bar_on  .cl_user_list_box { width: 20%;}
+.user3, .user4, .user7, .user9 { max-width: 100%; margin: 0 auto; }
+.user4 { /*height: 100%;*/ height: auto;} 
+.user4 .cl_user_list_box { /*height: 100%;*/ height: auto;}
+/* Width Count User */
+
+.active_svg {
+    fill: #464958;
+}
+.normal_svg {
+    fill: #fff;
+}
+.meeting_menu_center ul li a:hover .active_svg, .meeting_menu_center ul li a.active .active_svg{
+    fill:#287BD7;
+} 
+/* Meeting Videos Body  */
+
+/* ALERT BOX START*/
+
+.custom-alert{
+    position: fixed;
+    top: 0;
+    left: 0;    
+    transition: .3s;
+    width: 100%;
+    height: 100vh;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, .4);
+    overflow: hidden;
+}
+
+.custom-alert.d-none{
+    pointer-events: unset!important;
+    opacity: 1!important;
+}
+
+.custom-alert-wrapper{
+    background-color: white;
+    box-shadow: 0px 0px 12px #dddddd;
+    border-radius: 15px;
+    padding: 15px 24px;
+    min-width: 460px;
+    min-height: 200px;
+}
+
+.custom-alert-content{ 
+    margin-top: 30px;
+}
+
+.custom-alert-content p{
+    margin-bottom: 30px;
+    line-height: 30px;
+}
+.custom-alert-button{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.custom-alert-button button{
+    padding: 10px 20px;
+    margin-right: 30px;
+    font-size: 14px!important;
+} 
+
+/* ALERT BOX END*/
+
+/* START CHAT HANDLER*/
+
+.circle{
+    width: 10px;
+    height: 10px;
+    background: red;
+    border-radius: 50%;
+    position: relative;
+    bottom: 12px;
+    left: 2px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.circle.active{
+    opacity: 1!important;
+
+}
+
+.chat-box-sec.show {
+    height: 100%;
+    overflow: auto;
+}
+
+
+.chat-box-sec {
+    position: fixed;
+}
+
+/* END CHAT HANDLER*/
+
+/****************** Attendance List Start  ***************/
+
+.cl_attendance_list {
+    padding: 50px 0;
+}
+
+.cl_attendance_list h2 {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.attendance_table_box tr th:nth-child(1), .attendance_table_box tr td:nth-child(1) {
+    border-radius: 5px 0 0 5px;
+    overflow: hidden;
+}
+.attendance_table_box tr th:last-child, .attendance_table_box tr td:last-child{
+    border-radius: 0 5px 5px 0;
+    overflow: hidden;
+}
+.attendance_table_box th {
+    background: #03B3E5;
+    padding: 20px;
+    border: 0;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+}
+.attendance_table_box td {
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #f7f7f7;
+}
+.attendance_table_box td, .attendance_table_box th {
+    margin-bottom: 3px;
+    text-align: center;
+}
+/****************** Attendance List End  ***************/
+
+/*************************** Document Popup Css***************************/
+
+.modal-dialog {
+    width: 100%;
+    margin-top: 10%;
+}
+
+#UploadBox { margin: 3%;}
+.popup_videos_box.upload_doc_box { max-width: 600px; padding: 0; border-radius: 10px;}
+.upload_title_box { padding: 15px; border-bottom: 1px solid #000;}
+.upload_tabs {
+    padding: 10px;
+    color: #fff;
+    background:#00C7CC;
+    margin-right: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: all ease 0.3s 0s;
+}
+
+#pip-video:picture-in-picture {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+}
+
+:picture-in-picture {
+    box-shadow: 0 0 0 5px red;
+}
+
+.video-flip {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+}
+
+.upload_body_content {
+    padding: 30px;
+}
+
+.upload_tabs.active {
+    background: #000;
+}
+
+
+.upload_box {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 30px;
+    border: 3px dashed #00c7cc;
+    text-align: center;
+    position: relative;
+}
+
+.file-type-desc {
+    margin: 20px 0 15px;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.drag_box .browse-button {
+    padding: 6px 20px;
+    margin-left: 20px;
+    background: #319ED9;
+    border-radius: 5px;
+    color: #fff;
+}
+label.file {
+    position: absolute;
+    display: block;
+    width: 100%;
+    padding: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+input[type=file] {
+    position: absolute;
+    /*left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    outline: 0;
+    border: 1px solid red;*/
+}
+
+.sml {
+    display: none;
+}
+
+.submit_btn button {
+    padding: 0 30px;
+    margin-left: 20px;
+    background: #319ED9;
+    border-radius: 5px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 58px;
+    margin: 0 0;
+}
+
+.submit_btn button img {
+    margin-right: 10px;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #319ed9;
+}
+.btn-primary.focus, .btn-primary:focus, .btn-primary:hover {
+    color: #fff;
+    background-color: #00c7cc;
+}
+
+.upload_list_box_inr {
+    padding: 15px;
+    background: #fff;
+    border-radius: 5px;
+    margin: 5px;
+    width: calc(50% - 10px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.upload_list_box {
+   
+    background: #f6f6f6;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+span.Close_Documents {
+    width: 10px;
+    height: 10px;
+    background: url(../images/close.svg)no-repeat center;
+    background-size: 100%;
+    cursor: pointer;
+}
+
+.upload_video {
+    padding: 10px;
+    color: #000;
+    background:#00C7CC;
+    margin-right: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: all ease 0.3s 0s;
+}
+
+.upload_title_box2 { padding: 15px; margin: auto;}
+
+/*************************** Document Popup Css***************************/
+
+/********************** Participent List ********************************/
+.participant-listOpen .participant-list-wrapper{
+    /*right: 0;*/
+    transform: scaleX(1);
+}
+.participant-list-wrapper {
+    min-width: 320px;
+    background-color: #fff;
+    position: absolute;
+    /*top: 0;*/
+    right: 0;
+    height: calc(100vh - 162.89px);
+    transition: .3s;
+    z-index: 9999;
+    transform: scaleX(0);   
+    transform-origin: right;
+}
+.participant-list-wrapper>div {
+    margin: 30px 20px 0 20px;
+}   
+.participant-list-wrapper h2 {
+    border-bottom: 1px solid #ccc;
+    font-size: 17px;
+    padding: 5px 0 10px;
+    text-align: center;
+    margin: 0;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+.participant-list {
+    padding: 0;
+    display: block;
+}
+.participant-list .users {
+    font-size: 13px;
+    color: #555;
+    font-family: inherit;
+    padding: 10px 0;
+    display: block;
+    text-transform: capitalize;
+    line-height: 22px;
+    background: url(../images/user-icon.png)no-repeat top left;
+    background-size: 15px;
+    padding-left: 20px;
+    background-position-y: 13px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+}
+.participant-list .users:last-child {
+    border-bottom: none;
+}
+/*********************** Participent List *******************************/
+
+/********************* Chat Box  **************************************/
+.ChatsBoxOpen .user_chat_box {
+    /*right: 0;*/
+    transform: scaleX(1);
+}
+.user_chat_box {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    /*bottom: 0;*/
+    right: 0;
+    background: #fff;
+    width: 300px;
+    z-index: 999999;
+    padding: 20px;
+    box-shadow: 7px 0 5px rgb(55 71 79 / 23%);
+    transition: all ease 0.3s 0s;
+    height: calc(100vh - 162.89px);
+    transform: scaleX(0);   
+    transform-origin: right;
+    overflow-wrap: anywhere;
+}
+.user_chat_box_top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #b7bfc3;
+}
+.user_chat_box_message {
+    overflow: auto;
+    display: flex;
+    flex: 1;
+    width: 100%;
+}
+.user_chat_box_top h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+a.CloseChats {
+    display: inline-block;
+}
+.user_chat_item_inr {
+    padding-bottom: 20px;
+}
+.user_chat_item_inr .time_chat {
+    font-size: 12px;
+    padding-bottom: 2px;
+    display: block;
+    font-weight: 400;
+    color: #888;
+}
+.user_chat_item_inr p {
+    font-size: 15px;
+    font-weight: 400;
+    padding-bottom: 0;
+    margin: 0 0 3px;
+    color: #000;
+    line-height: 18px;
+}
+.user_chat_item_inr .time_chat {
+    font-size: 12px;
+    padding-bottom: 2px;
+    display: block;
+    font-weight: 400;
+    color: #888;
+}
+.user_chat_box_btm_main {
+    padding: 20px 0 0;
+}
+.user_chat_box_btm_right {
+    display: flex;
+    align-items: center;
+}
+.user_chat_box_btm {
+    position: relative;
+}
+.user_chat_box_emoji, .user_chat_box_file_upload {
+    margin-left: 20px;
+}
+.user_chat_box_btm input[type="text"] {
+    padding: 10px 15px;
+    width: 100%;
+    font-size: 15px;
+    background: #EEEEEE;
+    border: 0;
+    border-radius: 5px;
+}
+.user_chat_box_btm_main .emoji-wysiwyg-editor {
+    height: 45px !important;
+    padding: 12px 30px 0 10px;
+    border-radius: 3px;
+    margin-top: 5px;
+}
+.user_chat_box_btm .send_btn {
+    position: absolute;
+    right: 10px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    top: 50%;
+    transform: translateY(-50%);
+}
+/********************* Chat Boxx **************************************/
+
+/********************* Document List *******************************/
+.document-listOpen .document-list-wrapper{
+    transform: scaleX(1);
+}
+.document-list-wrapper {
+    width: 320px;
+    background-color: #fff;
+    position: absolute;
+    right: 0;
+    height: calc(100vh - 162.89px);
+    transition: .3s;
+    z-index: 9999;
+    transform: scaleX(0);
+    transform-origin: right;
+}
+.document-list-wrapper>div {
+    margin:20px;
+}   
+.document-list-wrapper h2 {
+    border-bottom: 1px solid #ccc;
+    font-size: 18px;
+    padding: 0 0 20px;
+    text-align: center;
+    margin: 0;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    color: #000;
+    font-weight: 700;
+}
+.document-list {
+    padding: 0;
+    display: block;
+    margin: 0;
+    border-bottom: 1px solid #ccc;
+}
+.document-list .users {
+    padding: 0 15px;
+    text-transform: capitalize;
+    color: #fff;
+    font-weight: 500;
+    font-size: 15px;
+    color: #555;
+    font-family: inherit;
+    display: block;
+    text-transform: capitalize;
+    background: none;
+    background-size: 15px;
+    background-position-y: 13px;
+    border-bottom: 1px solid #eee;
+    font-weight: 600;
+    line-break: anywhere;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: flex;
+    align-items: flex-start;
+    padding: 20px 0;
+}
+.document-list .users:last-child {
+    border-bottom: none;
+}
+.actions {
+    display: block;
+}
+.actions a {
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px 20px;
+    background: #000;
+    color: #fff !important;
+    margin: 10px 10px 0 0;
+    border-radius: 3px;
+}   
+
+.document-list .users {
+    padding: 20px 0;
+    border-bottom: 1px solid #ccc;
+}
+.document-list .users {
+    color: #555;
+    font-family: inherit;
+    display: block;
+    text-transform: capitalize;
+    line-height: 22px;
+    background: none;
+    background-size: 15px;
+    background-position-y: 13px;
+    border-bottom: 1px solid #eee;
+    font-weight: 300;
+    line-break: anywhere;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: flex;
+    align-items: flex-start;
+    padding: 20px 0;
+}
+
+.document-list-wrapper>.user_chat_box_btm_main {
+    margin: 0;
+    padding: 9px 9px 0;
+    border-top: solid 1px gray;
+}
+.user_chat_box_btm {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+input#meeting_document {
+    font-size: 0;
+}
+.user_chat_box_btm label{
+    background: black;
+    color: white;
+    width: 56%;
+}
+input[type="file" i] {
+    font-size: 0;
+}
+.user_chat_box_btm ::-webkit-file-upload-button {
+    font-size: 20px;
+    -webkit-appearance: button;
+    background: #000;
+    color: #fff;
+    padding: 6px 20px;
+    border-radius: 4px;
+}
+p.text-warning {
+    padding: 0 0 0 20px;
+    margin: 0;
+}
+.actions {
+    width: auto;
+    display: flex;
+    justify-content: flex-end;
+}
+.users .actions a {
+    padding: 0 0;
+    background: white;
+    margin: 0 0 0 10px;
+}
+.users .actions {
+    width: auto;
+    display: flex;
+    justify-content: flex-end;
+}
+.document-list .users .actions {
+    flex: 1;
+}
+.document-list-wrapper > div:nth-child(1) {
+    height: calc(100% - 70px);
+    overflow: auto;
+    margin: 0;
+    padding: 20px;
+}
+/********************** Document List ******************************/
+
+/************** Start white board **************/
+.whiteboard-wrapper{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh; 
+    z-index: 99999; 
+    background-color: white;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.whiteboard-wrapper.show{
+    pointer-events: unset;
+    opacity: 1;
+    
+}
+
+.whiteboard-head{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.whiteboard-btn{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+/******************** End White board **********************/
+
+/******************* Start Video Quality *********************/
+.upload_video {
+    padding: 10px;
+    color: #000;
+    background:#00C7CC;
+    margin-right: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: all ease 0.3s 0s;
+}
+.upload_title_box2 {
+    padding: 15px;
+    margin: 0;
+    border-bottom: 1px solid #e0e0e0;
+    align-items: center;
+    display: flex;
+}
+.upload_title_box2 ~ .modal-body ~ .modal-footer {
+    justify-content: center !important;
+}
+.upload_title_box2 ~ .modal-body ~ .modal-footer button {
+    margin: 0 20px;
+}
+
+.video_quality_name {
+    margin-left: 5px;
+}
+
+.upload_title_box2 { padding: 15px; margin: auto;}
+
+.close_icon:hover { transform: rotate(90deg); }
+.close_icon { position: absolute; right: 15px; top: 15px; transition: all ease 0.3s 0s; }
+/******************* End Video Quality *********************/
+
+.Name_value {
+    width: 150px;
+    height: 150px;
+    background: #000;
+    border-radius: 100%;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    color: #fff;
+    font-size: 58px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-100%, -50%);
+    border:solid;
+    overflow: hidden;
+}
+
+span.circle_remote_participant {
+    width: 70px;
+    height: 70px;
+    background: #000;
+    border-radius: 100%;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    color: #fff;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%, -50%);
+    border:solid;
+    overflow: hidden;
+}
+
+/*===================== Start Present Student to meeting =====================*/
+.present_student_video {    
+    width: 20%;
+    right: 21px;
+    position: fixed;
+    top: 76px;
+}
+.present_student_video .cl_user_list_box_videos {
+    max-height: 184px;
+}
+/*===================== End Present Student to meeting =======================*/
+
+/*===================== Start view paticipant on full screen ========================*/
+.fullscreen .cl_main_meeting_box {
+    position: absolute;
+    height: 200px;
+    z-index: 1001;
+    width: 250px;
+    top: 0;
+    left: 0;
+}
+.fullscreen .cl_user_list {
+    height: calc(100% - 200px);
+    top: 200px;
+}
+.fullscreen .meeing_video_body{
+    position: relative;
+}
+/*================== End view paticipant on full screen ============================ */
+
+/*===================== Start presented student video in half screen ==============*/
+.meeing_video_body.present_student .cl_user_list {
+    width: 100% !important;
+    display: flex;
+}
+.meeing_video_body.present_student .cl_user_list .cl_user_list_box {
+    width: 50%;
+    position: relative;
+    top: 0;
+    right: 0;
+}
+.meeing_video_body.present_student .cl_user_list .cl_user_list_box.present_student .cl_user_list .cl_user_list_box {
+    max-height: unset;
+}
+.meeing_video_body.present_student .cl_user_list .cl_user_list_box.present_student_video .cl_user_list_box_videos {
+    max-height: unset !important;
+    height: 100%;
+}
+.meeing_video_body.present_student .cl_user_list .cl_user_list_box.present_student_video .cl_user_list_box_videos video {
+    height: 100% !important;
+}
+.present_student .cl_main_meeting_box {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1001;
+    width: 200px;
+    height: 200px;
+}
+/*===================== End presented student video in half screen ================*/
+
+/* 8-19-2021 */
+
+.left_cl_menu_call {
+    display: flex;
+}
+
+.left_cl_menu_call ul#myTab {
+    display: flex;
+    flex-direction: row !important;
+}
+
+.left_cl_menu_call ul#myTab li {
+    padding: 15px 50px !important;
+    font-size: 18px !important;
+    margin: 0 15px 0 0;
+    text-transform: capitalize !important;
+    display: inline-block;
+    background: #ffffff !important;
+    color: #03b3e5 !important;
+    border-radius: 5px;
+    line-height: 1;
+    border: 2px solid #03b3e5;
+    transition: all .3s ease 0s;
+    font-weight: 500;
+}
+
+.left_cl_menu_call ul#myTab li.active, .left_cl_menu_call ul#myTab li:hover {
+    background: #03b3e5 !important;
+    color: #fff !important;
+}
+
+.right_meeting_box .search_box input[type="text"] {
+    height: 48px;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    background: #FFF;
+    min-width: 280px;
+    padding: 0 20px;
+    font-size: 16px;
+    box-shadow: 0 0 10px rgb(0 0 0 / 4%);
+}
+
+a.green_btn, .right_sec_cl_menu_call button.blue_btn, .right_sec_cl_menu_call a.blue_btn {
+    display: inline-block;
+    font-size: 18px;
+    background: #03b3e5;
+    color: #fff;
+    padding: 15px 60px;
+    border-radius: 55px;
+    line-height: 1;
+    text-transform: capitalize;
+    border: 2px solid #03b3e5;
+    transition: all .3s ease 0s;
+    margin: 0 0 0 18px;
+}
+
+.right_meeting_box {
+    display: flex;
+    align-items: center;
+}
+
+a.green_btn:hover, .right_sec_cl_menu_call button.blue_btn:hover, .right_sec_cl_menu_call a.blue_btn {
+    background: transparent;
+    color: #03b3e5;
+}
+.right_sec_cl_menu_call a.blue_btn:hover {
+    background: #03b3e5;
+    color: #fff;
+}
+
+.right_sec_cl_menu_call button.blue_btn,  .right_sec_cl_menu_call a.blue_btn  {
+    margin: 0 10px 0 0;
+    border-radius: 5px;
+}
+.left_cl_menu_call {
+    display: flex;
+    padding: 0 9px 30px;
+}
+.right_sec_cl_menu_call table {
+    margin-top: 50px;
+    box-shadow: 0 0 10px #00000057;
+    border-radius: 10px;
+    background: #fff;
+}
+.right_sec_cl_menu_call table th, .right_sec_cl_menu_call table td {
+    font-size: 17px;
+    font-weight: 500;
+    border: 0;
+}
+
+.bg_section_new {
+    background: #f8f9fa;
+    padding: 50px 0;
+}
+
+.right_sec_cl_menu_call table th:nth-child(1), .right_sec_cl_menu_call table th:last-child {
+    border-radius: 0 10px 0 0;
+}
+.right_sec_cl_menu_call table th {
+    background: #000;
+    color: #fff;
+}
+
+.right_sec_cl_menu_call table th:nth-child(1) {
+    border-radius: 10px 0 0 0;
+} 
+.right_sec_cl_menu_call table th:last-child {
+    border-radius: 0 10px 0 0;
+}
+
+/* css for share student screen */
+.meeing_video_body.present_student {
+    position: relative;
+}
+.fullscreen .present_student .cl_user_list .cl_user_list_box:nth-child(1) {
+    width: 100%;
+}
+.fullscreen .present_student .cl_user_list .cl_user_list_box:nth-child(2) {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 0;
+    top: 200px;
+}
+/* css for share student screen */
+
+/* css for chat user profile */
+.chatProfileImage{
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    max-width: unset;
+    position: relative;
+    right: 20px;
+}
+/* css for chat user profile */
+
+.STTOn .cl_main_noti_box {
+    height: 200px;
+    bottom: 90px;
+    scrollbar-width: thin;
+    scrollbar-color: #333333 #000000;
+}
+
+/* Chrome, Edge, and Safari */
+.STTOn .cl_main_noti_box::-webkit-scrollbar {
+    width: 16px;
+}
+
+.STTOn .cl_main_noti_box::-webkit-scrollbar-track {
+    background: #000000;
+}
+
+.STTOn .cl_main_noti_box::-webkit-scrollbar-thumb {
+    background-color: #333333;
+    border-radius: 12px;
+    border: 0px solid #000000;
+}
+
+.STTOn .cl_main_meeting_box ,.STTOn  .cl_user_list{
+    height: calc(100% - 145px);
+}
+
+.export-margin
+{
+  margin-left: 711px;
+}
+
+.TileView .cl_main_home_box{
+    display: block;
+    position: absolute;
+    /* width: 206px; */
+    height: 154px;
+    right: 5px;
+    /*z-index: 999999;*/
+    top: 70px;
+}
+
+.disabled{
+    pointer-events:none;
+    opacity: 0.6;
+}
+
+/*CSS for recording button - Start*/
+#stoprecording_svg {
+    fill: #ff0000;
+}
+
+#startrecording_svg{
+    fill: #464958;
+}
+/*CSS for recording button - End*/
+
+
+.cl_user_list_box_videos img, .cl_user_list_box_videos video {
+        max-width: 100%;
+        height: auto;
+        /* object-fit: cover; */
+    }
+
+
+.cl_main_home_box_video img, .cl_main_home_box_video video {
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+}
+
+
+.TileView .cl_user_list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: max-content;
+    grid-auto-rows: auto;
+    grid-gap: 5px;
+    justify-items: center;
+}
+
+.TileView .cl_user_list_box, .TileView .cl_user_list_box_videos {
+    height: auto;
+}
+
+.user2 .cl_user_list_box { height: auto;}

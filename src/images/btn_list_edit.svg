@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34">
+  <g id="그룹_17738" data-name="그룹 17738" transform="translate(-1398 -295)">
+    <g id="사각형_95" data-name="사각형 95" transform="translate(1398 295)" fill="#fff" stroke="#1c2c36" stroke-width="1" opacity="0.07">
+      <rect width="34" height="34" rx="12" stroke="none"/>
+      <rect x="0.5" y="0.5" width="33" height="33" rx="11.5" fill="none"/>
+    </g>
+    <path id="edit" d="M7.135,2.692,2.154,7.808,0,14l6.192-2.019L11.173,7Zm6.327-.4L11.712.538a1.632,1.632,0,0,0-2.423,0L7.808,2.019l4.038,4.173,1.615-1.615A1.706,1.706,0,0,0,14,3.365,1.662,1.662,0,0,0,13.462,2.288Z" transform="translate(1408 305)" fill="#42526e"/>
+  </g>
+</svg>

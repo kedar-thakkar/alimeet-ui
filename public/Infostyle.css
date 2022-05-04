@@ -1,0 +1,76 @@
+.white_board_on {
+	
+}
+
+
+.main_meeting_videos.student_user {
+    width: 50%;
+    margin-left: auto;
+}
+
+.user_box_list.teacher_box { max-width: 50%; overflow: auto; padding: 0; bottom: 0; }
+.main_meeting_videos.student_user { width: 50%; margin-left: auto; }
+
+.white_board_on .main_meeting_videos.student_user {
+    margin: 0;
+}
+
+.whiteboard-wrapper.show {
+    pointer-events: unset;
+    opacity: 1;
+}
+.whiteboard-wrapper {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    background-color: white;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+    width: 50%;
+    overflow-y: auto;
+    left:unset;
+}
+
+
+.user_box_list {
+    width: 100%;
+    max-width: 50%;
+    bottom: 0;
+    max-height: unset;
+    padding: 0;
+}
+
+.main_meeting_videos {
+    height: 100%;
+    text-align: right;
+}
+
+.main_meeting_videos .local-video {
+    width: 50%;
+    height: 100%;
+    object-fit: cover!important;
+}
+
+.white_board_on .main_meeting_videos.student_user {
+    margin: 0;
+    text-align: left;
+}
+
+
+.student_user .local-video {
+    height: auto;
+    position: relative;
+    z-index: 999;
+    padding: 15px;
+    max-width: 230px;
+}
+
+.user_box_list .user_meeting_inr_box_otr.user1 .user_col {
+    height: 100% !important;
+    padding: 0;
+}
+
